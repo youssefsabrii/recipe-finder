@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Finder App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-utensils"></i> Recipe Finder</h1>
+      </header>
+
+      <main>
+        <!-- Search -->
+        <div class="search-container">
+          <div class="search-wrapper">
+            <input
+              type="text"
+              id="search-input"
+              list="search-history"
+              placeholder="Search for meals or keywords"
+            />
+            <span id="clear-search">&times;</span>
+            <datalist id="search-history"></datalist>
+          </div>
+          <button id="search-btn">Search</button>
+        </div>
+
+        <!-- Error -->
+        <div id="error-container" class="hidden"></div>
+
+        <!-- Meals Grid -->
+        <div id="meals" class="meals-container"></div>
+
+        <!-- Meal Details -->
+        <div id="meal-details" class="hidden">
+          <div class="meal-details-buttons-wrapper">
+            <div class="meal-details-buttons">
+              <button id="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to recipes
+              </button>
+              <button id="copy-ingredients" title="Copy Ingredients">
+                <i class="fas fa-copy"></i>
+                <span>copied</span>
+              </button>
+            </div>
+          </div>
+          <div class="meal-details-content"></div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay hidden">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Dark mode toggle fixed button -->
+    <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
