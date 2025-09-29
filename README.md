@@ -2,6 +2,10 @@
 
 A responsive Recipe Finder web app that lets users search for meals, view detailed recipes, and copy ingredients. The app supports dark mode and remembers the last successful search.
 
+## Demo
+
+Check out the live demo here: [Recipe Finder Live](https://youssefsabrii.github.io/recipe-finder/)
+
 ## Features
 
 - Search for meals by name or keyword.
